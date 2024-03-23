@@ -1,0 +1,44 @@
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin reset-button() {
+  padding: 0;
+
+  color: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  line-height: inherit;
+
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.list {
+  @include reset-list();
+  display: flex;
+  gap: 12px;
+
+  &__button {
+    @include reset-button();
+    padding: 8px;
+
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+
+    &.selected {
+      color: #ffffff;
+      border-color: #000000;
+      background-color: #000000;
+    }
+  }
+}
